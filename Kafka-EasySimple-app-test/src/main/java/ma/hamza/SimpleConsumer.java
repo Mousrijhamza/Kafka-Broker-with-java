@@ -27,6 +27,7 @@ public class SimpleConsumer {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
             for (ConsumerRecord<String, String> record : records) {
                 System.out.printf("Consommé message : clé = %s, valeur = %s, offset = %d%n", record.key(), record.value(), record.offset());
+//                System.out.println("Consommé message : clé = %s, valeur = %s, offset = %d%n", record.key(), record.value(), record.offset());
             }
         }
     }

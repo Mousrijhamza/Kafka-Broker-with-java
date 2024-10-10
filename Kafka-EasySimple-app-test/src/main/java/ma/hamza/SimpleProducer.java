@@ -20,6 +20,7 @@ public class SimpleProducer {
         for (int i = 0; i < 10; i++) {
             ProducerRecord<String, String> record = new ProducerRecord<>("test-topic", "key" + i, "value" + i);
             producer.send(record);
+            System.out.println(record.value());
         }
 
         // Fermer le producteur

@@ -1,9 +1,12 @@
 package ma.hamza;
 import org.apache.kafka.clients.consumer.ConsumerConfig; import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.clients.consumer.KafkaConsumer; import java.time.Duration; import java.util.Collections;
+import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.common.serialization.StringDeserializer;
+
+import java.time.Duration; import java.util.Collections;
 import java.util.Properties; import java.util.concurrent.Executors;import java.util.concurrent.TimeUnit;
 public class StreamConsumer {
-    private String KAFKA_BROKER_URL="192.168.43.22:19092";    private String TOPIC_NAME="testTopic";
+    private String KAFKA_BROKER_URL="127.0.0.1:9092";    private String TOPIC_NAME="test-1";
     public static void main(String[] args) {
         new StreamConsumer();
     }
@@ -14,13 +17,14 @@ public class StreamConsumer {
         properties.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG,"true");
         properties.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG,"1000");
         properties.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG,"30000");
-        properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.IntegerDeserializer");
+//        properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.IntegerDeserializer");
+        properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
-        KafkaConsumer<Integer, String> kafkaConsumer = new KafkaConsumer<Integer, String>(properties);
+        KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<String, String>(properties);
         kafkaConsumer.subscribe(Collections.singletonList(TOPIC_NAME));
         Executors.newScheduledThreadPool(1).scheduleAtFixedRate(()->{
             System.out.println("----------------------------------------");
-            ConsumerRecords<Integer,String> consumerRecords=kafkaConsumer.poll(Duration.ofMillis(10));
+            ConsumerRecords<String,String> consumerRecords=kafkaConsumer.poll(Duration.ofMillis(10));
             consumerRecords.forEach(cr->{
                 System.out.println("Key=>"+cr.key()+", Value=>"+cr.value()+", offset=>"+cr.offset());
             });

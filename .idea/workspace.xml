@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94c14823-89ab-4af7-8a68-2f059d696e20" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-EasySimple-app-test/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-EasySimple-app-test/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/hamza/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/hamza/StreamConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/hamza/StreamProducer.java" afterDir="false" />
+    <list default="true" id="94c14823-89ab-4af7-8a68-2f059d696e20" name="Changes" comment="1st commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-EasySimple-app-test/src/main/java/ma/hamza/SimpleConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-EasySimple-app-test/src/main/java/ma/hamza/SimpleConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-EasySimple-app-test/src/main/java/ma/hamza/SimpleProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-EasySimple-app-test/src/main/java/ma/hamza/SimpleProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/hamza/StreamConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/hamza/StreamConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/hamza/StreamProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/hamza/StreamProducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Mousrijhamza"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mousrijhamza/Kafka-Broker-with-java.git",
+    "accountId": "a90f2139-1e93-4862-ac30-d1d35f5ff8e0"
+  }
+}]]></component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -51,6 +56,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.SimpleConsumer.executor": "Run",
+    "Application.SimpleProducer.executor": "Run",
     "Application.StreamConsumer.executor": "Run",
     "Application.StreamProducer.executor": "Run",
     "Docker.Kafka-EasySimple-app-test/docker-compose.yaml: Compose Deployment.executor": "Run",
@@ -136,11 +143,24 @@
       <updated>1728497872993</updated>
       <workItem from="1728497874119" duration="8661000" />
       <workItem from="1728568247842" duration="382000" />
-      <workItem from="1728568649127" duration="7116000" />
+      <workItem from="1728568649127" duration="16190000" />
     </task>
+    <task id="LOCAL-00001" summary="1st commit">
+      <option name="closed" value="true" />
+      <created>1728577083870</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728577083870</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1st commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="1st commit" />
   </component>
 </project>
